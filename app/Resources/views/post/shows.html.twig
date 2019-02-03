@@ -1,0 +1,41 @@
+{{ include('post/inc/header.html.twig') }}
+    <br>
+    <a href="{{ path('post_index') }}" class="btn btn-primary ">BACK TO LIST</a>
+    <h1>View Delete Post</h1>
+
+    <table class="table">
+        <tbody>
+            <tr class="list-group">
+                <a CLASS="list-group-item active"> POST</a>
+
+            </tr>
+            <tr class="list-group-item">
+                <th>Id</th>
+                <td>{{ post.id }}</td>
+            </tr>
+            <tr class="list-group-item">
+                <th>Title</th>
+                <td>{{ post.title }}</td>
+            </tr>
+            <tr class="list-group-item">
+                <th>Content</th>
+                <td>{{ post.content }}</td>
+            </tr>
+
+              <tr class="list-group-item">
+                <th>Category</th>
+                <td>{{ post.Category}}</td>
+            </tr>
+
+            <tr class="list-group-item">
+                <th>Createdat</th>
+                <td>{% if post.createdAt %}{{ post.createdAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    {{ form_start(delete_form) }}
+        <br/><input type="submit" value="Delete" class="btn btn-danger" />
+    {{ form_end(delete_form) }}
+
+{{ include('post/inc/footer.html.twig') }}

@@ -1,0 +1,16 @@
+{% extends '::base.html.twig' %} 
+{% block body %}   
+    <table border="1">     
+        <tr>       
+            <th>ID </th> <th>NOM </th> <th>PRIX </th>     
+        </tr>    
+        {% for v in voitures %}        
+        <tr>         
+            <td>{{ v.numSerie }}</td>        
+             <td>{{ v.marque.nomMarque }}</td>        
+             <td>{{ v.dateMiseCircu|date("d/m/Y") }}</td>        
+        </tr>    
+        {% endfor %}   
+    </table> 
+{% endblock %} 
+ 

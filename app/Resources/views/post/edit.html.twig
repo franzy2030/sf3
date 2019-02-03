@@ -1,0 +1,14 @@
+{{ include('post/inc/header.html.twig') }}
+    <br>
+    <a href="{{ path('post_index') }}" class="btn btn-primary ">BACK TO LIST</a>
+    <h1>Post edit</h1>
+
+    {{ form_start(edit_form) }}
+        {{ form_widget(edit_form) }}
+        <input type="submit" value="EDIT POST" class="btn btn-primary"/>
+    {{ form_end(edit_form) }}
+
+    {{ form_start(delete_form) }}
+        <br><input type="submit" value="Delete" class="btn btn-danger">
+    {{ form_end(delete_form) }}
+{{ include('post/inc/footer.html.twig') }}

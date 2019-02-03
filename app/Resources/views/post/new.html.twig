@@ -1,0 +1,11 @@
+{{ include('post/inc/header.html.twig') }}
+    <br>
+    <a href="{{ path('post_index') }}" class="btn btn-primary ">BACK TO LIST</a>
+    <h1>Post creation</h1>
+
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <input type="submit" value="CREATE POST" class="btn btn-primary"/>
+    {{ form_end(form) }}
+
+{{ include('post/inc/footer.html.twig') }}

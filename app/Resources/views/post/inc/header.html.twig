@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Symfony 3 CRUD Franz</title>
+    <link rel="stylesheet" href="{{absolute_url(asset('css/bootstrap.min.css'))}}" />
+</head>
+<body>
+<div class="container-fluid bg-primary text-white">
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" > Symfony 3 CRUD Application</a>
+            </div>
+
+
+        </div>
+    </nav>
+</div>
+
+<div class="container">
+
+        {% for success_message in app.session.flashbag.get('message') %}
+            <br><div class="alert alert-success"> {{ success_message }}</div>
+        {% endfor %}
+
